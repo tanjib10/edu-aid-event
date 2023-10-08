@@ -44,7 +44,10 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <Link
+          to="/"
+          className="text-fuchsia-500 btn btn-ghost font-bold text-2xl"
+        >
           Edu-Aid
         </Link>
       </div>
@@ -53,7 +56,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <button>
-          <Link to="/login" className="text-lg font-semibold">
+          <Link to="/login" className="text-xl text-fuchsia-400 font-semibold">
             Login
           </Link>
         </button>
