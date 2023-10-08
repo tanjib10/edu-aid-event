@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/Yb1j6Vx/element5-digital-Oy-Cl7-Y4y0-Bk-unsplash.jpg",
+    "title": "Online Tutoring",
+    "description": "Get personalized online tutoring services for students of all ages. Access expert help for math, science, language arts, and more. Flexible scheduling and interactive lessons available."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/nRj7JN6/jeswin-thomas-z4-A6-Vdg-4-RE-unsplash.jpg",
+    "title": "STEM Workshops",
+    "description": "Explore STEM through hands-on workshops. Engaging activities in robotics, coding, chemistry, and more for students, educators, and enthusiasts."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/1QNPrWX/md-duran-1-Vq-HRwxc-CCw-unsplash.jpg",
+    "title": "Language Learning",
+    "description": "Master new languages for travel, business, or personal enrichment. Learn speaking, listening, reading, and writing skills with immersive techniques."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/kH0MR4n/scott-graham-5f-Nm-Wej4t-AA-unsplash.jpg",
+    "title": "Career Courses",
+    "description": "Invest in your future with career development courses. Gain skills in project management, digital marketing, data analytics, and more."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/Ns8mSdM/desola-lanre-ologun-Ig-UR1i-X0mq-M-unsplash.jpg",
+    "title": "Test Prep Services",
+    "description": "Prepare for standardized tests like SAT, ACT, GRE, and GMAT. Study strategies, practice tests, and personalized feedback to boost your scores."
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/8K8MYsm/national-cancer-institute-t-V-RX0be-Dp8-unsplash.jpg",
+    "title": "E-Learning",
+    "description": "Discover convenient e-learning. Access video lectures, quizzes, assignments, and collaborate with fellow learners."
+  }
+]

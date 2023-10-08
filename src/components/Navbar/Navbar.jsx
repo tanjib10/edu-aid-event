@@ -1,3 +1,4 @@
+import { MdOutlineCastForEducation } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -48,7 +49,7 @@ const Navbar = () => {
           to="/"
           className="text-fuchsia-500 btn btn-ghost font-bold text-2xl"
         >
-          Edu-Aid
+          <MdOutlineCastForEducation></MdOutlineCastForEducation> Edu-Aid
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
