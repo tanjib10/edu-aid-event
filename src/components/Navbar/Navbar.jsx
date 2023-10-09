@@ -1,3 +1,4 @@
+import userDefault from "../../assets/user.png";
 import { MdOutlineCastForEducation } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
@@ -40,14 +41,14 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-fuchsia-300 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
         <Link
           to="/"
-          className="text-fuchsia-500 btn btn-ghost font-bold text-3xl"
+          className="text-[#9C0063] btn btn-ghost font-bold text-3xl"
         >
           <MdOutlineCastForEducation></MdOutlineCastForEducation> Edu-Aid
         </Link>
@@ -56,11 +57,12 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <button>
-          <Link to="/login" className="text-xl text-fuchsia-400 font-semibold">
+        <img className="w-8" src={userDefault} alt="" />
+        <Link to="/login">
+          <button className="text-xl font-semibold btn btn-ghost text-[#9C0063]">
             Login
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -11,10 +11,10 @@ const Featured = () => {
   return (
     <div>
       <h3 className="text-3xl text-center">
-        <span className=" font-semibold">Featured In </span>
+        <span className=" font-semibold text-[#9C0063]">Featured In </span>
       </h3>
       <Marquee pauseOnHover speed={40} delay={2}>
-        <div className=" text-fuchsia-300 flex mt-8 space-x-14">
+        <div className="text-[#D693BD] flex mt-8 space-x-14">
           <div className="text-xl font-medium italic flex items-center">
             <BiAnchor></BiAnchor>
             <p>Edu-Anchor</p>
