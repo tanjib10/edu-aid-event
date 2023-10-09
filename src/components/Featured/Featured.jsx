@@ -10,8 +10,10 @@ import Marquee from "react-fast-marquee";
 const Featured = () => {
   return (
     <div>
-      <h3 className="text-3xl text-center">
-        <span className=" font-semibold text-[#9C0063]">Featured In </span>
+      <h3 className="text-3xl mb-8 text-center">
+        <span className=" font-semibold text-[#9C0063]">
+          Featured <span className="text-black">In</span>{" "}
+        </span>
       </h3>
       <Marquee pauseOnHover speed={40} delay={2}>
         <div className="text-[#D693BD] flex mt-8 space-x-14">

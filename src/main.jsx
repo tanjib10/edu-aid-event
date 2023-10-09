@@ -11,6 +11,7 @@ import CardDetails from "./components/cardDetails/CardDetails";
 import Register from "./components/Register/Register";
 import AuthProvider from "./Provider/AuthProvider";
 import Login from "./components/Login/Login";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <CardDetails></CardDetails>,
+        element: (
+          <PrivateRoute>
+            <CardDetails></CardDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/serviceData.json"),
       },
     ],

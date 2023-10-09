@@ -77,7 +77,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <img className="w-8" src={userDefault} alt="" />
+        {user ? (
+          <div className="flex items-center justify-center gap-2">
+            <p>{user.displayName}</p>
+            <img className="w-8" src={user.photoURL} alt="" />
+          </div>
+        ) : (
+          <img className="w-8" src={userDefault} alt="" />
+        )}
+
         {user ? (
           <button
             onClick={handleSignOut}

@@ -1,10 +1,34 @@
 import Swal from "sweetalert2";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful",
+          text: "You have been successfully Logged in!",
+        });
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Login Error",
+          text: "Email and Password did not match",
+        });
+      });
+  };
 
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -18,6 +42,7 @@ const Login = () => {
           title: "Login Successful",
           text: "You have been successfully Logged in!",
         });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);
@@ -29,7 +54,7 @@ const Login = () => {
       });
   };
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center my-6 lg:text-left">
@@ -62,8 +87,16 @@ const Login = () => {
                 />
                 <label className="label"></label>
               </div>
-              <div className="form-control mt-2">
-                <button className="btn text-white bg-[#9C0063]">Login</button>
+              <div className="flex justify-center items-center mt-2">
+                <button className="btn flex-1 text-white bg-[#9C0063]">
+                  Login
+                </button>
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="flex-1 btn text-white bg-[#9C0063]"
+                >
+                  Google
+                </button>
               </div>
               <p className="mt-2">
                 Do not have an account?{" "}

@@ -47,10 +47,10 @@ const Register = () => {
     e.target.name.value = "";
   };
   return (
-    <div>
+    <div data-aos="fade-down">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
-          <div className="text-center mt-6 lg:text-left">
+          <div className="text-center my-6 lg:text-left">
             <h1 className="text-5xl font-bold">Register</h1>
           </div>
           <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
