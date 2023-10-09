@@ -7,6 +7,7 @@ import ErrorPage from "./ErrorPage/ErrorPage";
 import Home from "./Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import CardDetails from "./components/cardDetails/CardDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/details/:id",
+        element: <CardDetails></CardDetails>,
+        loader: () => fetch("/serviceData.json"),
       },
     ],
   },

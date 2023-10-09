@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { BiPurchaseTag } from "react-icons/bi";
+import { Link } from "react-router-dom";
 const Service = ({ service }) => {
   const { id, purchasedBy, price, image, title } = service;
   return (
@@ -18,7 +19,10 @@ const Service = ({ service }) => {
         </div>
 
         <div className="card-actions">
-          <button className="btn bg-[#9C0063] text-white">Details</button>
+          <Link to={`/details/${id}`}>
+            {" "}
+            <button className="btn bg-[#9C0063] text-white">Details</button>
+          </Link>
         </div>
       </div>
     </div>

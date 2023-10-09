@@ -1,10 +1,17 @@
+import Swal from "sweetalert2";
 const Contact = () => {
+  const handleSubmit = () => {
+    Swal.fire("Submitted successfully!");
+  };
   return (
     <div className="my-16">
+      <h3 className="text-3xl  font-semibold text-center my-12">
+        Help us to <span className="text-[#9C0063]"> improve </span>
+      </h3>
       <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero-content flex-col  lg:flex-row">
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl lg:text-5xl font-bold text-center">
+            <h1 className="text-3xl text-[#9C0063] lg:text-5xl font-bold text-center">
               Contact us now!
             </h1>
             <p className="p-6">
@@ -38,7 +45,12 @@ const Contact = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#9C0063] text-white">Submit</button>
+                <button
+                  onClick={handleSubmit}
+                  className="btn bg-[#9C0063] text-white"
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </div>
