@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import image from "../../assets/kenny-eliason-zFSo6bnZJTw-unsplash (2).jpg";
 const About = () => {
   return (
-    <div className="my-16">
+    <div data-aos="zoom-out" className="my-16">
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col  lg:flex-row-reverse">
           <img

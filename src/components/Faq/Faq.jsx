@@ -1,7 +1,7 @@
 import image1 from "../../assets/funny-3d-illustration-american-referee.jpg";
 const Faq = () => {
   return (
-    <div>
+    <div data-aos="zoom-in-up" data-aos-duration="3000">
       <h3 className="mb-10 text-3xl text-center font-semibold">
         <span className="text-[#9C0063]">Frequently </span>Asked Questions
       </h3>

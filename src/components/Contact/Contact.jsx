@@ -4,7 +4,13 @@ const Contact = () => {
     Swal.fire("Submitted successfully!");
   };
   return (
-    <div className="my-16">
+    <div
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+      className="my-16"
+    >
       <h3 className="text-3xl  font-semibold text-center my-12">
         Help us to <span className="text-[#9C0063]"> improve </span>
       </h3>
