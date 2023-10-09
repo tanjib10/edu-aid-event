@@ -1,8 +1,23 @@
+import Swal from "sweetalert2";
+import { useContext } from "react";
 import userDefault from "../../assets/user.png";
 import { MdOutlineCastForEducation } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "Logged Out",
+          text: "You have been successfully logged out!",
+        });
+      })
+      .catch();
+  };
   const navLinks = (
     <>
       <li className="mr-2">
@@ -20,11 +35,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div
-      data-aos="zoom-in"
-      data-aos-duration="3000"
-      className="navbar items-center bg-base-100"
-    >
+    <div className="navbar items-center bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,11 +78,20 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <img className="w-8" src={userDefault} alt="" />
-        <Link to="/login">
-          <button className="text-xl font-semibold btn btn-ghost text-[#9C0063]">
-            Login
+        {user ? (
+          <button
+            onClick={handleSignOut}
+            className="text-xl font-semibold btn btn-ghost text-[#9C0063]"
+          >
+            Logout
           </button>
-        </Link>
+        ) : (
+          <Link to="/login">
+            <button className="text-xl font-semibold btn btn-ghost text-[#9C0063]">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );

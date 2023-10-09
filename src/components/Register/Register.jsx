@@ -2,6 +2,7 @@
 import Swal from "sweetalert2";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -32,10 +33,6 @@ const Register = () => {
           title: "Registration Successful",
           text: "You have been successfully registered!",
         });
-
-        e.target.email.value = "";
-        e.target.password.value = "";
-        e.target.name.value = "";
       })
       .catch((error) => {
         console.log(error);
@@ -45,12 +42,15 @@ const Register = () => {
           text: error.message,
         });
       });
+    e.target.email.value = "";
+    e.target.password.value = "";
+    e.target.name.value = "";
   };
   return (
     <div>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
-          <div className="text-center lg:text-left">
+          <div className="text-center mt-6 lg:text-left">
             <h1 className="text-5xl font-bold">Register</h1>
           </div>
           <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
@@ -97,6 +97,12 @@ const Register = () => {
                   Register
                 </button>
               </div>
+              <p className="mt-2">
+                Already have an account?{" "}
+                <Link className="text-blue-500" to="/login">
+                  Login here.
+                </Link>
+              </p>
             </form>
           </div>
         </div>

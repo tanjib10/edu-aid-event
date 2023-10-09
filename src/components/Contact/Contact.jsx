@@ -45,8 +45,8 @@ const Contact = () => {
                 </label>
                 <textarea
                   type="text"
-                  placeholder="Your Message"
-                  className="h-20 input input-bordered"
+                  placeholder="message"
+                  className="h-20 p-2 input input-bordered"
                   required
                 />
               </div>

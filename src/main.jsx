@@ -10,6 +10,7 @@ import Contact from "./components/Contact/Contact";
 import CardDetails from "./components/cardDetails/CardDetails";
 import Register from "./components/Register/Register";
 import AuthProvider from "./Provider/AuthProvider";
+import Login from "./components/Login/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/details/:id",
