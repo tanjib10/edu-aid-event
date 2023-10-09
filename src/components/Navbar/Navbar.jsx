@@ -19,7 +19,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar items-center bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
         <Link
           to="/"
-          className="text-fuchsia-500 btn btn-ghost font-bold text-2xl"
+          className="text-fuchsia-500 btn btn-ghost font-bold text-3xl"
         >
           <MdOutlineCastForEducation></MdOutlineCastForEducation> Edu-Aid
         </Link>

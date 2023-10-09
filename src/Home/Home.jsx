@@ -1,11 +1,13 @@
 import Banner from "../components/Banner/Banner";
-import Navbar from "../components/Navbar/Navbar";
+import Featured from "../components/Featured/Featured";
 
 const Home = () => {
   return (
-    <div className="space-y-6">
-      <Navbar></Navbar>
+    <div className="py-12">
       <Banner></Banner>
+      <div className="pt-32">
+        <Featured></Featured>
+      </div>
     </div>
   );
 };
