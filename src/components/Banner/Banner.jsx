@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <Swiper
@@ -44,12 +45,14 @@ const Banner = () => {
               <h2 className="text-xl border-transparent md:text-2xl lg:text-3xl font-bold text-center text-white">
                 Empowering Minds: <br /> Explore, Learn, Grow
               </h2>
-              <button className="btn inline-flex border-transparent justify-center items-center bg-[#9C0063] text-white px-6 py-2 mt-6 rounded-lg  transition duration-300">
-                Learn More
-                <span className="ml-1">
-                  <AiOutlineArrowRight></AiOutlineArrowRight>
-                </span>
-              </button>
+              <Link to="/about">
+                <button className="btn inline-flex border-transparent justify-center items-center bg-[#9C0063] text-white px-6 py-2 mt-6 rounded-lg  transition duration-300">
+                  Learn More
+                  <span className="ml-1">
+                    <AiOutlineArrowRight></AiOutlineArrowRight>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

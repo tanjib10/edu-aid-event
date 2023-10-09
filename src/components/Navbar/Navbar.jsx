@@ -23,9 +23,16 @@ const Navbar = () => {
       <li className="mr-2">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="mr-2">
-        <NavLink to="/about">About</NavLink>
-      </li>
+      {user ? (
+        <div>
+          <li className="mr-2">
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </div>
+      ) : (
+        ""
+      )}
+
       <li className="mr-2">
         <NavLink to="/contact">Contact</NavLink>
       </li>
@@ -79,7 +86,7 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center justify-center gap-2">
-            <p>{user.displayName}</p>
+            <p className="text-black">{user.displayName}</p>
             <img className="w-8" src={user.photoURL} alt="" />
           </div>
         ) : (
